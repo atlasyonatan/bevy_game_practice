@@ -1,4 +1,4 @@
-use bevy::prelude::*;
+use bevy::{ecs::reflect, prelude::*};
 use bevy_rapier2d::prelude::*;
 
 pub struct PlayerPlugin;
@@ -18,7 +18,8 @@ impl Plugin for PlayerPlugin {
     }
 }
 
-#[derive(Component)]
+#[derive(Component, Reflect)]
+#[reflect(Component)]
 pub struct Player;
 
 #[derive(Component, Default)]

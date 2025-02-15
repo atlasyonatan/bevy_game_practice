@@ -8,7 +8,6 @@ use my_game::MyGamePlugin;
 //mutiny remake?
 
 fn main() {
-    println!("Hello, world 3!");
     App::new()
         .add_plugins(DefaultPlugins)
         .add_plugins(MyGamePlugin)

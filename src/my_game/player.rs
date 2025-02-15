@@ -41,7 +41,7 @@ fn players_jump_system(
         if keyboard.pressed(KeyCode::ArrowUp)
             && controller_output.is_some_and(|output| output.grounded)
         {
-            commands.entity(entity).insert(JumpCooldown(0.1));
+            commands.entity(entity).insert(JumpCooldown(0.2));
             velocity.linvel.y += jump_speed;
         }
     }
